@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="libraries/bootstrap/bootstrap.min.css" rel=stylesheet type="text/css">
+  <script src="libraries/jquery/jquery-3.3.1.min.js"></script>
+  <script src="libraries/popper/popper.min.js"></script>
+  <script src="libraries/bootstrap/bootstrap.min.js"></script>
+  <script src="libraries/clipboard/clipboard.min.js"></script>
+</head>
+
+<body style="height: 585px; width:515px;">
+  <div class="container pt-4">
+    <form>
+      <div class="form-group row">
+        <label for="css-selector" class="col-4 col-form-label">CSS Selector</label>
+        <div class="col-8">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <i class="fas fa-asterisk"></i>
+              </div>
+            </div>
+            <input id="css-selector" name="text" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-4">First or All</label>
+        <div class="col-8">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input name="single-all" id="single-all_0" type="radio" class="custom-control-input" value="all" required="required">
+            <label for="single-all_0" class="custom-control-label">All</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input name="single-all" id="single-all_1" type="radio" required="required" class="custom-control-input" value="first">
+            <label for="single-all_1" class="custom-control-label">First</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="offset-4 col-8">
+          <button name="submit" type="submit" class="btn btn-primary" id="submit-scrape">Scrape!</button>
+        </div>
+      </div>
+    </form>
+    <div id="results-div" class="container">
+      <div class="row">
+        <div class="col">
+          <h3>Results</h3>
+        </div>
+        </div>
+    <div class="row">
+    <div class="col-10">
+      <textarea class="form-control" id="results" rows="10"></textarea>
+      </div>
+      <div class="col-2">
+      <button id="copy-results" class="btn btn-success" data-clipboard-target="#results">
+        <i class="fas fa-clipboard"></i>
+        </button>
+        </div>
+    </div>
+  </div>
+
+  <script defer src="libraries/fontawesome/fontawesome-all.min.js"></script>
+  <script src="popup/scrape.js"></script>
+</body>
+
+</html>

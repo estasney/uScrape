@@ -1,0 +1,35 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "uScrape",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "uScrape",
+  "homepage_url": "https://estasney1.pythonanywhere.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "uScrape",
+    "default_popup": "src/popup.html",
+    "js": ["src/libraies/jquery/jquery-3.3.1.min.js",
+      "src/libraries/popper/popper.min.js",
+      "src/libraries/bootstrap/bootstrap.min.js",
+      "src/libraries/clipboard/clipboard.min.js"
+    ],
+    "css": ["src/libraries/bootstrap/bootstrap.min.css", "src/libraries/fontawesome/fontawesome-all.min.css",
+    "src/popup.css"],
+    "permissions": [
+      "tabs", "<all_urls>"
+    ]
+  },
+  "content_scripts" : [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["src/inject.js"]
+    }
+  ]
+}
