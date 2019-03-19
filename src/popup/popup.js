@@ -4,6 +4,31 @@ document.addEventListener("DOMContentLoaded", function() {
   setupScrape();
 });
 
+function Row(selector) {
+  this.selector = selector;
+}
+
+function Column(name, selector, attribute) {
+  this.name = name;
+  this.selector = selector;
+  this.attribute = attribute;
+}
+
+function RowResult() {
+  }
+
+
+
+function scrape(row, columns){
+  var output = [];
+  var rows = document.querySelector(row.selector);
+  rows.forEach(function(row){
+
+  })
+
+}
+
+
 function setupScrape() {
   $("form").submit(function(evt) {
     evt.preventDefault();
